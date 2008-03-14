@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Stampe-SV4/stampe-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Stampe-SV4/Sounds/stampe-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Stampe-SV4/Models/stampe.xml</path>
+    </model>
+
+    <panel>
+      <visibility archive="y">false</visibility>
+    </panel>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+    </multiplay> 
+
+    <help>
+      <title>Stampe SV4</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew doors</desc>
+      </key>
+      <line>----------------------------------------------</line>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passagers doors</desc>
+      </key>
+      <line>----------------------------------------------</line>
+      <key>
+        <name>Ctrl d</name>
+        <desc>Open/Close engine doors</desc>
+      </key>
+      <line>______________________________________________</line>
+    </help>
+
+  </sim>
+ 
+  <input>
+    <keyboard include="Nasal/stampe-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <sv4>
+      <file>Aircraft/Stampe-SV4/Nasal/doors.nas</file>
+    </sv4>
+  </nasal>
+  
+</PropertyList>

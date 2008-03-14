@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<PropertyList include="stampe-base.xml">
+
+  <sim>
+
+    <description>Stampe-SV4 (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">stampe-yasim</aero>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>140</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Baggage</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>20</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+  </sim>
+
+</PropertyList>
