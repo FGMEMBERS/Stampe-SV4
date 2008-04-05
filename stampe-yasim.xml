@@ -108,7 +108,7 @@
              z="0.114"  
              radius="0.99"
              mass="342"       
-             moment="4"
+             moment="-4"
              cruise-power="110"
              cruise-alt="5000" 
              cruise-speed="75"
