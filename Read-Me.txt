@@ -27,6 +27,8 @@ Thanks
 ======
 
 France VFR ( http://www.francevfr.com/ ) and Eric DANTES for the original model
+Laurent HAYVEL for the livrery
+Pierre GOEFFROY for the FDM
 
 ===============
 BARANGER Emmanuel
@@ -64,6 +66,8 @@ Remerciements
 =============
 
 France VFR ( http://www.francevfr.com/ ) et Eric DANTES pour le modèle original
+Laurent HAYVEL pour la superbe livrée
+Pierre GEOFFROY pour le modèle de vol
 
 ===============
 BARANGER Emmanuel

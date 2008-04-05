@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D)</author>
+    <author>Emmanuel BARANGER (3D), Pierre GEOFFROY (FDM), Laurent HAYVEL (Livery)</author>
     <aircraft-version>0.2</aircraft-version>
     <status>Alpha</status>
 
@@ -49,8 +49,53 @@
       <line>______________________________________________</line>
     </help>
 
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>140</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Baggage</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>20</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <menubar>
+      <default>
+        <menu n="10">
+          <label>Stampe SV4</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+          </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
+
   </sim>
- 
+
+  <controls>
+    <engines>
+      <engine>
+        <mixture archive="y"> 0.65 </mixture>
+      </engine>
+    </engines>
+  </controls> 
+
   <input>
     <keyboard include="Nasal/stampe-keyboard.xml"/>
   </input>
@@ -58,7 +103,10 @@
   <nasal>
     <sv4>
       <file>Aircraft/Stampe-SV4/Nasal/doors.nas</file>
+      <file>Aircraft/Stampe-SV4/Nasal/stampe.nas</file>
+      <file>Aircraft/Stampe-SV4/Nasal/liveries.nas</file>
     </sv4>
   </nasal>
   
 </PropertyList>
+

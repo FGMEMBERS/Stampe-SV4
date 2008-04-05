@@ -7,6 +7,7 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
+    <object-name>souscapot</object-name>
     <object-name>capotG</object-name>
     <object-name>capotD</object-name>
     <object-name>aileH</object-name>
@@ -16,7 +17,9 @@
     <object-name>aileronBG</object-name>
     <object-name>aileronBD</object-name>
     <object-name>barres</object-name>
+    <object-name>axeG</object-name>
     <object-name>roueG</object-name>
+    <object-name>axeD</object-name>
     <object-name>roueD</object-name>
     <object-name>axes</object-name>
     <object-name>roueA</object-name>
@@ -51,6 +54,45 @@
     <object-name>propdisc</object-name>
     <object-name>vitres</object-name>
     <object-name>vitresint</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>souscapot</object-name>
+    <object-name>capotG</object-name>
+    <object-name>capotD</object-name>
+    <object-name>aileH</object-name>
+    <object-name>aileB</object-name>
+    <object-name>aileronHG</object-name>
+    <object-name>aileronHD</object-name>
+    <object-name>aileronBG</object-name>
+    <object-name>aileronBD</object-name>
+    <object-name>barres</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axes</object-name>
+    <object-name>roueA</object-name>
+    <object-name>derive</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>air</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>helice</object-name>
+    <object-name>bol</object-name>
+    <object-name>montants</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>cables</object-name>
+    <object-name>tuyaux</object-name>
+    <object-name>retro</object-name>
+    <object-name>antenne</object-name>
+    <object-name>moteur</object-name>
+    <property-base>/sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>F-LHCL.png</texture>
   </animation>
 
   <!-- Intérieur -->
@@ -317,7 +359,7 @@
     <type>rotate</type>
     <object-name>capotG</object-name>
     <property>instrumentation/doors/engine/position-norm</property>
-    <factor> -85.0 </factor>
+    <factor> -60.0 </factor>
     <center>
       <x-m> -2.369 </x-m>
       <y-m>  0.000 </y-m>
@@ -334,7 +376,7 @@
     <type>rotate</type>
     <object-name>capotD</object-name>
     <property>instrumentation/doors/engine/position-norm</property>
-    <factor> 85.0 </factor>
+    <factor> 60.0 </factor>
     <center>
       <x-m> -2.369 </x-m>
       <y-m>  0.000 </y-m>
@@ -344,6 +386,69 @@
       <x> 1.000 </x>
       <y> 0.000 </y>
       <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>axeG</object-name>
+    <object-name>roueG</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>  0.00 </ind>
+        <dep> -0.05 </dep>
+      </entry>
+      <entry>
+        <ind> 0.70 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 1.00 </ind>
+        <dep> 0.01 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -1.734 </x-m>
+      <y-m> -0.606 </y-m>
+      <z-m> -0.938 </z-m>
+    </center>
+    <axis>
+      <x> 0.015376 </x>
+      <y> 0.034921 </y>
+      <z> 0.051847 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>axeD</object-name>
+    <object-name>roueD</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>  0.00 </ind>
+        <dep> -0.05 </dep>
+      </entry>
+      <entry>
+        <ind> 0.70 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 1.00 </ind>
+        <dep> 0.01 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -1.734 </x-m>
+      <y-m>  0.606 </y-m>
+      <z-m> -0.938 </z-m>
+    </center>
+    <axis>
+      <x>  0.015376 </x>
+      <y> -0.034921 </y>
+      <z>  0.051847 </z>
     </axis>
   </animation>
 
