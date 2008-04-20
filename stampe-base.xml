@@ -20,6 +20,9 @@
 
     <model>
       <path archive="y">Aircraft/Stampe-SV4/Models/stampe.xml</path>
+      <livery>
+        <file type="string">LH-CLIC</file>
+      </livery>
     </model>
 
     <panel>
