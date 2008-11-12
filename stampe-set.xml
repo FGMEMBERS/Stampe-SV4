@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<!-- <PropertyList include="stampe-jsbsim-set.xml"> -->
-<PropertyList include="stampe-yasim-set.xml">
+<!-- <PropertyList include="stampe-jsbsim-cnf.xml"> -->
+<PropertyList include="stampe-yasim-cnf.xml">
 
   <sim>
     <description>Stampe SV 4 Br</description>

@@ -21,16 +21,20 @@
     <model>
       <path archive="y">Aircraft/Stampe-SV4/Models/stampe.xml</path>
       <livery>
-        <file type="string">LH-CLIC</file>
+        <file type="string">default</file>
       </livery>
     </model>
 
-    <panel>
-      <visibility archive="y">false</visibility>
-    </panel>
-
     <multiplay>
       <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
     </multiplay> 
 
     <help>
@@ -73,21 +77,7 @@
       <min-lb>0</min-lb>
     </weight>
 
-    <menubar>
-      <default>
-        <menu n="10">
-          <label>Stampe SV4</label>
-          <enabled type="bool">true</enabled>
-          <item>
-            <label>Select Livery</label>
-            <binding>
-              <command>nasal</command>
-              <script>aircraft.livery.dialog.toggle()</script>
-          </binding>
-          </item>
-        </menu>
-      </default>
-    </menubar>
+    <menubar include="Dialogs/stampe-menu.xml"/>
 
   </sim>
 
@@ -102,7 +92,7 @@
   <input>
     <keyboard include="Nasal/stampe-keyboard.xml"/>
   </input>
- 
+
   <nasal>
     <sv4>
       <file>Aircraft/Stampe-SV4/Nasal/doors.nas</file>
@@ -110,6 +100,6 @@
       <file>Aircraft/Stampe-SV4/Nasal/liveries.nas</file>
     </sv4>
   </nasal>
-  
+
 </PropertyList>
 

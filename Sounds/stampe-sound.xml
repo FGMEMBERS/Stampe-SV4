@@ -6,7 +6,7 @@
  
   <crank>
    <name>engstart</name>
-   <path>Sounds/engstart.wav</path>
+   <path>Aircraft/Stampe-SV4/Sounds/engstart.wav</path>
    <property>/engines/engine/cranking</property>
    <volume>
     <offset>0.4</offset>
@@ -40,7 +40,7 @@
   <engine>
    <name>engine</name>
    <mode>looped</mode>
-   <path>Sounds/wasp.wav</path>
+   <path>Aircraft/Stampe-SV4/Sounds/running.wav</path>
    <property>/engines/engine/running</property>
    <volume>
     <property>/engines/engine/mp-osi</property>

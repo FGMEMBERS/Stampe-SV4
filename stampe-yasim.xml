@@ -15,7 +15,6 @@
   <approach speed="42" aoa="7" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/> <!-- Ground adjustment only -->
-
     <solve-weight idx="0" weight="180"/>
   </approach>
   
@@ -99,8 +98,8 @@
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-  <!-- engine:    RENAULT 4-PO5 145 HP at 2450 RPM
-       propeller	EVRA 6006A 1.98 m diameter
+  <!-- engine    : RENAULT 4-PO5 145 HP at 2450 RPM
+       propeller : EVRA 6006A 1.98 m diameter
   =================================================================================
   -->
   <propeller x="3.551" 
