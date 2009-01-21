@@ -6,7 +6,7 @@
  
   <crank>
    <name>engstart</name>
-   <path>Aircraft/Stampe-SV4/Sounds/engstart.wav</path>
+   <path>Aircraft/Stampe-SV4/Sounds/starter.wav</path>
    <property>/engines/engine/cranking</property>
    <volume>
     <offset>0.4</offset>
@@ -38,34 +38,24 @@
   </crank>
 
   <engine>
-   <name>engine</name>
-   <mode>looped</mode>
-   <path>Aircraft/Stampe-SV4/Sounds/running.wav</path>
-   <property>/engines/engine/running</property>
-   <volume>
-    <property>/engines/engine/mp-osi</property>
-    <factor>0.00375</factor>
-    <min>0.15</min>
-    <max>0.5</max>
-   </volume>
-   <volume>
-    <property>/orientation/alpha-deg</property>
-    <type>log</type>
-    <min>1.0</min>
-    <max>1.5</max>
-   </volume>
-   <volume>
-    <property>/sim/current-view/internal</property>
-    <offset>1.0</offset>
-    <factor>-0.7</factor>
-   </volume>
-   <pitch>
-    <property>/engines/engine/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.5</min>
-    <max>2.0</max>
-    <offset>0.15</offset>
-   </pitch>
+    <name>engine</name>
+    <path>Aircraft/Stampe-SV4/Sounds/running.wav</path>
+    <mode>looped</mode>
+    <property>/engines/engine/running</property>
+    <volume>
+      <property>/engines/engine/mp-osi</property>
+      <factor>0.035</factor>
+      <min>0.15</min>
+      <max>1.0</max>
+      <offset>0.15</offset>
+    </volume>
+    <pitch>
+      <property>/engines/engine/rpm</property>
+      <factor>0.0008</factor>
+      <min>0.3</min>
+      <max>1.0</max>
+      <offset>0.3</offset>
+    </pitch>
   </engine>
 
   <propeller>
@@ -143,43 +133,31 @@
    </pitch>
   </squeal>
  
-  <flap>
-   <name>flaps</name>
-   <mode>in-transit</mode>
-   <path>Sounds/flaps.wav</path>
-   <property>/surface-positions/flap-pos-norm</property>
-   <volume>
-    <factor>0.8</factor>
-   </volume>
-   <reference-dist>10.0</reference-dist>
-   <max-dist>20.0</max-dist>
-  </flap>
-
   <wind>
    <name>wind</name>
    <mode>looped</mode>
    <path>Sounds/wind.wav</path>
-   <property>/velocities/airspeed-kt</property>
+   <property>velocities/airspeed-kt</property>
    <volume>
-    <property>/position/altitude-ft</property>
+    <property>position/altitude-ft</property>
     <factor>-0.000015</factor>
     <offset>1.0</offset>
     <min>0.1</min>
     <max>1.0</max>
    </volume>
    <volume>
-     <property>/velocities/airspeed-kt</property>
-     <factor>0.0015</factor>
+     <property>velocities/airspeed-kt</property>
+     <factor>0.003</factor>
      <min>0.03</min>
-     <max>0.25</max>
+     <max>1.2</max>
    </volume>
    <pitch>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.0035</factor>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.003</factor>
     <offset>1.25</offset>
    </pitch>
   </wind>
- 
+
   <stall>
    <name>stall</name>
    <mode>looped</mode>
