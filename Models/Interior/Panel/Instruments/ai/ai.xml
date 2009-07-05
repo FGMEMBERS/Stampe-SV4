@@ -1,15 +1,15 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList> 
 
   <path>ai.ac</path>
 
   <animation>
-    <object-name>Fond</object-name>
-    <object-name>Face</object-name>
-    <object-name>aircraft</object-name>
+    <object-name>fond</object-name>
+    <object-name>aitour</object-name>
+    <object-name>face</object-name>
     <object-name>horizon-line</object-name>
-    <object-name>bezelinside</object-name>
+    <object-name>aircraft</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -26,22 +26,26 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <animation> 
+  <animation>
     <type>material</type>
-    <emission> 
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    <object-name>aitour</object-name>
+    <object-name>face</object-name>
+    <object-name>horizon-line</object-name>
+    <object-name>aircraft</object-name>
+    <emission>
       <red>   0.75 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
     </emission>
   </animation>
 
   <animation> 
     <type>rotate</type>
-    <object-name>Face</object-name>
+    <object-name>face</object-name>
     <object-name>horizon-line</object-name>
     <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
-    <axis>
+    <axis> 
       <x> 1 </x>
       <y> 0 </y>
       <z> 0 </z>
@@ -53,21 +57,21 @@
     <object-name>horizon-line</object-name>
     <property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
     <interpolation> 
-      <entry><ind> -180 </ind><dep>  0.03 </dep></entry>
-      <entry><ind>  -90 </ind><dep>  0.03 </dep></entry>
-      <entry><ind>  -40 </ind><dep>  0.02 </dep></entry>
-      <entry><ind>  -20 </ind><dep>  0.01 </dep></entry>
-      <entry><ind>    0 </ind><dep>  0.00 </dep></entry>
-      <entry><ind>   20 </ind><dep> -0.01 </dep></entry>
-      <entry><ind>   40 </ind><dep> -0.02 </dep></entry>
-      <entry><ind>   90 </ind><dep> -0.03 </dep></entry>
-      <entry><ind>  180 </ind><dep> -0.03 </dep></entry>
-    </interpolation>
-    <axis>
+      <entry><ind> -180 </ind><dep>  0.030 </dep></entry>
+      <entry><ind>  -90 </ind><dep>  0.030 </dep></entry>
+      <entry><ind>  -40 </ind><dep>  0.020 </dep></entry>
+      <entry><ind>  -20 </ind><dep>  0.010 </dep></entry>
+      <entry><ind>    0 </ind><dep>  0.000 </dep></entry>
+      <entry><ind>   20 </ind><dep> -0.010 </dep></entry>
+      <entry><ind>   40 </ind><dep> -0.020 </dep></entry>
+      <entry><ind>   90 </ind><dep> -0.030 </dep></entry>
+      <entry><ind>  180 </ind><dep> -0.030 </dep></entry>
+      </interpolation>
+    <axis> 
       <x> 0 </x>
       <y> 0 </y>
       <z> 1 </z>
     </axis>
   </animation>
-
+	
 </PropertyList>

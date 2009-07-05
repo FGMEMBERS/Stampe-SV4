@@ -1,13 +1,11 @@
-<?xml version="1.0"?>
-
-<!-- Airspeed indicator -->
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>asi.ac</path>
 
   <animation>
-    <object-name>bezelinside</object-name>
+    <object-name>fond</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
 
@@ -32,10 +30,10 @@
     <object-name>face</object-name>
     <object-name>needle</object-name>
     <emission> 
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
       <red>   0.75 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
     </emission>
   </animation>
 

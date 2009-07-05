@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -20,15 +20,28 @@
 
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
   </animation>
 
   <!-- Pilote -->
   <model>
     <path>Aircraft/Stampe-SV4/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m>  0.424 </x-m>
+      <x-m> -0.643 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.100 </z-m>
+      <z-m> -0.010 </z-m>
     </offsets>
   </model>
 
@@ -36,18 +49,18 @@
   <model>
     <path>Aircraft/Stampe-SV4/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> 0.390 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.290 </z-m>
+      <x-m> -0.677 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 0.380 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Stampe-SV4/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -0.482 </x-m>
+      <x-m> -1.549 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.290 </z-m>
+      <z-m>  0.380 </z-m>
     </offsets>
   </model>
 
@@ -55,18 +68,18 @@
   <model>
     <path>Aircraft/Stampe-SV4/Models/Interior/Panel/Instruments/tach/tach.xml</path>
     <offsets>
-      <x-m> -0.482 </x-m>
+      <x-m> -1.549 </x-m>
       <y-m> -0.194 </y-m>
-      <z-m>  0.269 </z-m>
+      <z-m>  0.359 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Stampe-SV4/Models/Interior/Panel/Instruments/tach/tach.xml</path>
     <offsets>
-      <x-m>  0.390 </x-m>
+      <x-m> -0.677 </x-m>
       <y-m> -0.194 </y-m>
-      <z-m>  0.269 </z-m>
+      <z-m>  0.359 </z-m>
     </offsets>
   </model>
 
@@ -77,9 +90,9 @@
     <property>/controls/flight/elevator</property>
     <factor>10</factor>
     <center>
-      <x-m> -0.424 </x-m>
+      <x-m> -1.491 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.335 </z-m>
+      <z-m> -0.245 </z-m>
     </center>
     <axis>
       <x>  0.000 </x>
@@ -94,9 +107,9 @@
     <property>/controls/flight/aileron</property>
     <factor>10</factor>
     <center>
-      <x-m> -0.424 </x-m>
+      <x-m> -1.491 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.335 </z-m>
+      <z-m> -0.245 </z-m>
     </center>
     <axis>
       <x> -1.000 </x>
@@ -112,9 +125,9 @@
     <property>/controls/flight/elevator</property>
     <factor>10</factor>
     <center>
-      <x-m>  0.425 </x-m>
+      <x-m> -0.642 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.335 </z-m>
+      <z-m> -0.245 </z-m>
     </center>
     <axis>
       <x>  0.000 </x>
@@ -129,9 +142,9 @@
     <property>/controls/flight/aileron</property>
     <factor>10</factor>
     <center>
-      <x-m>  0.425 </x-m>
+      <x-m> -0.642 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -0.335 </z-m>
+      <z-m> -0.245 </z-m>
     </center>
     <axis>
       <x> -1.000 </x>
@@ -146,19 +159,13 @@
     <object-name>manetteA2</object-name>
     <property>controls/engines/engine/throttle</property>
     <interpolation>
-      <entry>
-        <ind>   0.00 </ind>
-        <dep> -15.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 70.00 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -15 </dep></entry>
+      <entry><ind> 1 </ind><dep>  70 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.466 </x-m>
+      <x-m> -1.533 </x-m>
       <y-m> -0.249 </y-m>
-      <z-m> -0.010 </z-m>
+      <z-m>  0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -172,19 +179,13 @@
     <object-name>manetteB2</object-name>
     <property>controls/engines/engine/throttle</property>
     <interpolation>
-      <entry>
-        <ind>   0.00 </ind>
-        <dep> -15.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 70.00 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -15 </dep></entry>
+      <entry><ind> 1 </ind><dep>  70 </dep></entry>
     </interpolation>
     <center>
-      <x-m>  0.413 </x-m>
+      <x-m> -0.654 </x-m>
       <y-m> -0.249 </y-m>
-      <z-m> -0.010 </z-m>
+      <z-m>  0.080 </z-m>
     </center>
     <axis>
       <x>  0 </x>
