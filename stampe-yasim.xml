@@ -65,7 +65,7 @@
         twist="0" 
         camber="0.05">
         <stall aoa="25" width="3.0" peak="1.5"/>
-        <flap1 start="0.207" end="0.820" lift="1.2" drag="1.1"/>
+        <flap1 start="0.250" end="0.880" lift="1.2" drag="1.1"/>
       
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
@@ -104,10 +104,8 @@
        propeller : EVRA 6006A 1.98 m diameter
   =================================================================================
   -->
-  <propeller x="3.551" 
-             y="0.0" 
-             z="0.114"  
-             radius="0.99"
+  <propeller x="3.000" y="0.0" z="0.292"  
+             radius="1.1"
              mass="342"       
              moment="-4"
              cruise-power="110"
@@ -121,7 +119,7 @@
                             eng-power="145"
                             displacement="384" 
                             compression="5.8"/>
-             <actionpt x="4.010" y="0.0" z="0.114" />
+             <actionpt x="3.240" y="0.0" z="0.292" />
              <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
              <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
              <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
@@ -164,7 +162,7 @@
   
   <weight x="0.609" y="0.0" z="0.166" mass-prop="/sim/weight[0]/weight-lb"/>
 
-  <!-- CG théorique x=1.087 y=0.0 z=-0.317 -->
+  <!-- CG theorique x=1.087 y=0.0 z=-0.317 -->
   <ballast x="-0.174" y="0.0" z="-1.728" mass="400" />
 
 </airplane>
