@@ -60,7 +60,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitres</object-name>
   </animation>
 
@@ -139,6 +139,23 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/Stampe-SV4/Models/shadow.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <equals>
+        <property>sim[0]/rendering/shadows-ai</property>
+        <value>true</value>
+      </equals>
+    </condition>
   </animation>
 
   <!-- Intérieur -->
@@ -282,7 +299,7 @@
   <animation>
     <type>rotate</type>
     <object-name>profondeur</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>11</factor>
     <center>
       <x-m> 2.754 </x-m>
@@ -300,7 +317,7 @@
   <animation>
     <type>rotate</type>
     <object-name>direction</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <factor>20</factor>
     <center>
       <x-m> 2.791 </x-m>
