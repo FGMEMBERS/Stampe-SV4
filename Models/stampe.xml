@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Stampe-SV4/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -58,20 +72,6 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>souscapot</object-name>
@@ -110,19 +110,6 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -134,37 +121,124 @@
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <!-- Transparency for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>vitres</object-name>
+  </effect>
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Stampe-SV4/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -0.83 </z-m>
+    </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
 
   <!-- Intérieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/Stampe-SV4/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+
+  <!-- Cranking effects -->
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
+      <x-m> -2.92850 </x-m>
+      <y-m>  0.12694 </y-m>
+      <z-m> -0.32668 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.73289 </x-m>
+      <y-m>  0.12694 </y-m>
+      <z-m> -0.36663 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.57652 </x-m>
+      <y-m>  0.12694 </y-m>
+      <z-m> -0.37354 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.41823 </x-m>
+      <y-m>  0.11789 </y-m>
+      <z-m> -0.38530 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -1.747 </x-m>
+      <y-m> -0.783 </y-m>
+      <z-m> -1.259 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -1.747 </x-m>
+      <y-m>  0.783 </y-m>
+      <z-m> -1.259 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte de queue -->
+  <model>
+    <path>Aircraft/Stampe-SV4/Models/Effects/ground/ground2.xml</path>   
+    <offsets>
+      <x-m>  2.916 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.269 </z-m>
     </offsets>
   </model>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,7 +7,7 @@
     <desc>Door engine</desc>
     <binding>
       <command>nasal</command>
-      <script>sv4.doorsystem.engineexport();</script>
+      <script>doors.doorsystem.engineexport();</script>
     </binding>
   </key>
 
@@ -16,7 +16,7 @@
     <desc>Passenger door</desc>
     <binding>
       <command>nasal</command>
-      <script>sv4.doorsystem.passengerexport();</script>
+      <script>doors.doorsystem.passengerexport();</script>
     </binding>
   </key>
 
@@ -25,7 +25,7 @@
     <desc>Crew Ddor</desc>
     <binding>
       <command>nasal</command>
-      <script>sv4.doorsystem.crewexport();</script>
+      <script>doors.doorsystem.crewexport();</script>
     </binding>
   </key>
 

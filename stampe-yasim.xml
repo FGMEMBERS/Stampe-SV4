@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Stampe SV 4 B
                   3D model by Emmanuel BARANGER
@@ -28,11 +28,7 @@
 
   <cockpit x="0.349" y="0.00" z="0.553"/>
 
-  <fuselage ax="3.185" ay="0" az="0.297" 
-            bx="-2.806" by="0" bz="0.221"
-            width="0.672" 
-            taper="0.2" 
-            midpoint="0.5"/>
+  <fuselage ax="3.185" ay="0" az="0.297" bx="-2.806" by="0" bz="0.221" width="0.672" taper="0.2" midpoint="0.5"/>
 
   <!-- Wing up -->
   <wing x="1.606" y="0.282" z="1.045" 
