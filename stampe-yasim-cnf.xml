@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="stampe-base.xml">
+
+  <sim>
+
+    <description>Stampe-SV4 (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">stampe-yasim</aero>
+
+  </sim>
+
+</PropertyList>
